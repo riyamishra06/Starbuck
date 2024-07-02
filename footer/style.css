@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Gilroy;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+#footer-section-heading{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10vh;
+    margin-bottom: 20vh;
+}
+
+#footer-btns button{
+    padding: 1.5vh 4vh;
+    margin: 0 2vh;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 100px;
+}
+#footer-btns button:nth-child(2){
+    background-color: #000;
+    color: white;
+}
+#real-footer {
+    height:100vh;
+    background-color:#006641;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    position: relative;
+    transform: translateY(100%); /* Start off-screen */
+    animation: slideUp 1s ease forwards;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.footer-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-c-1, .footer-c-2{
+    height: 100%;
+    width: 50%;
+}
+.images-footer{
+    padding: 3vw;
+    color: white;
+}
+.images-footer div{
+    display: flex;
+    align-items: center;
+}
+.images-footer img{
+    height: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: fadeSlide 1s ease-in;
+}
+.images-footer p{
+    font-size: 1.4vw;
+    padding: 3vh 0;
+}
+.images-footer input{
+    padding: 2vh 4vh;
+    margin-bottom: 3vh;
+    width: 20vw;
+    border: none;
+    border-radius: 20px;
+}
+.images-footer button{
+    padding: 1.5.ki8vh 3vh;
+    border-radius: 100px;
+    border: none;
+}
+.footer-c-2{
+    display: flex;
+    gap: 10vh;
+    color: white;
+}
+.footer-c-2 a{
+    text-decoration: none;
+    color: white;
+}
+.footer-c-2 h1{
+    font-size: 3vh;
+    padding-bottom: 2vh;
+}
+.footer-c-2 div{
+    gap: 1vh;
+    display: flex;
+    flex-direction: column;
+}
+.copyright{
+    padding: 4vh 10vh;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    justify-content: space-around; 
+    
+    
+    p:nth-child(3){
+        text-decoration: none;
+        color: white;
+    }
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
