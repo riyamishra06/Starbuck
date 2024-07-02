@@ -1,22 +1,13 @@
-const prevButton = document.getElementById('prev');
-const nextButton = document.getElementById('next');
-const carousel = document.getElementById('carousel');
-let scrollAmount = 0;
-
-prevButton.addEventListener('click', () => {
-    carousel.style.animation = 'none';
-    scrollAmount -= carousel.clientWidth / 5; 
-    carousel.style.transform = `translateX(${scrollAmount}px)`;
-    setTimeout(() => {
-        carousel.style.animation = 'scroll 30s linear infinite';
-    }, 1000);
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', () => {
+        alert('Your product has been added to the cart!');
+    });
 });
-
-nextButton.addEventListener('click', () => {
-    carousel.style.animation = 'none';
-    scrollAmount += carousel.clientWidth / 5; 
-    carousel.style.transform = `translateX(${scrollAmount}px)`;
-    setTimeout(() => {
-        carousel.style.animation = 'scroll 30s linear infinite';
-    }, 1000);
+document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('mouseover', () => {
+        card.classList.add('card-hover');
+    });
+    card.addEventListener('mouseout', () => {
+        card.classList.remove('card-hover');
+    });
 });
